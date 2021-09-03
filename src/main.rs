@@ -34,13 +34,13 @@ fn main() {
 
         ask_question(String::from("what is the first number ?: "), &mut num1);
         ask_question(String::from("what is the second number ?: "), &mut num2);
-        ask_question(String::from("what is the operator (+-*/) ?: "), &mut operator);
+        ask_question(String::from("what is the operator (/+*-) ?: "), &mut operator);
 
         let num1: f32 = parse_to_float(&mut num1);
         let num2: f32 = parse_to_float(&mut num2);
         let operator: char = parse_to_char(&mut operator);
 
-        let operations = String::from("+-*/");
+        let operations = String::from("/+*-");
 
         if !operations.contains(operator) {
             println!("unknown operator");
